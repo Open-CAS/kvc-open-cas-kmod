@@ -1,0 +1,41 @@
+#
+# Copyright(c) 2022 Intel Corporation
+# SPDX-License-Identifier: BSD-3-Clause-Clear
+#
+
+ARG IMAGE=registry.access.redhat.com/ubi8/ubi
+
+FROM $IMAGE
+WORKDIR /build/
+
+# Expecting Open CAS version as an input to the build
+ARG KMODVER
+
+# Grab Open CAS code from upstream and remove modprobe from its Makefile
+RUN git clone https://github.com/open-cas/open-cas-linux.git
+WORKDIR /build/open-cas-linux
+RUN git checkout -b ${KMODVER} ${KMODVER} \
+    && git submodule update --init \
+    && sed -i 's/utils//g' Makefile \
+    && sed -i 's/^.*MODPROBE.*$//g' modules/Makefile
+
+# Note, your host must have access to repos where kernel development
+# packages can be installed. If it doesn't the following steps will
+# fail
+
+# Build and prepare the module
+RUN ./configure
+RUN make
+RUN make install
+
+# Add the helper tools
+WORKDIR /root/kvc-open-cas-kmod
+COPY Makefile .
+COPY open-cas-kmod-lib.sh .
+COPY open-cas-kmod-wrapper.sh .
+COPY open-cas-kmod.conf .
+RUN mkdir -p /usr/lib/kvc/
+RUN mkdir -p /etc/kvc/
+RUN make install
+
+RUN systemctl enable kmods-via-containers@open-cas-kmod

@@ -1,0 +1,25 @@
+apiVersion: sro.openshift.io/v1beta1
+kind: SpecialResource
+metadata:
+  name: open-cas-kmod
+spec:
+  namespace: open-cas-kmod
+  chart:
+    name: open-cas-kmod
+    version: 0.0.1
+    repository:
+      name: open-cas-kmod
+      url: https://github.com/open-cas/kvc-open-cas-kmod/raw/main
+  set:
+    kind: Values
+    apiVersion: sro.openshift.io/v1beta1
+    kmodNames: ["cas-cache", "cas-disk"]
+    buildArgs:
+    - name: "KMODVER"
+      # REPLACE BELOW VALUE WITH DESIRED OPEN-CAS LINUX RELEASE
+      value: "v22.3"
+  driverContainer:
+    source:
+      git:
+        ref: "main"
+        uri: "https://github.com/open-cas/kvc-open-cas-kmod.git"
