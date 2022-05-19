@@ -1,5 +1,10 @@
+#
+# Copyright(c) 2022 Intel Corporation
+# SPDX-License-Identifier: BSD-3-Clause
+#
+
 ifndef DESTDIR
-DESTDIR=/usr/
+DESTDIR=/usr
 endif
 ifndef CONFDIR
 CONFDIR=/etc
