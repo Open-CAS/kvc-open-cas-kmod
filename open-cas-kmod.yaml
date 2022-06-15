@@ -9,7 +9,7 @@ spec:
     version: 0.0.1
     repository:
       name: open-cas-kmod
-      url: https://github.com/open-cas/kvc-open-cas-kmod/raw/main
+      url: cm://open-cas-kmod/open-cas-kmod-chart
   set:
     kind: Values
     apiVersion: sro.openshift.io/v1beta1
