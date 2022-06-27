@@ -1,0 +1,23 @@
+apiVersion: v1
+binaryData:
+  open-cas-kmod-0.0.1.tgz: H4sIFAAAAAAA/ykAK2FIUjBjSE02THk5NWIzVjBkUzVpWlM5Nk9WVjZNV2xqYW5keVRRbz1IZWxtAOwZ3W/buK/P/iuI/H64p9lx2qwrfBjuum43DPtEM+zlcA+MTNu6yJIhye5yRf73g/yVxOnaYWs6DBc+JLFJ8UskRSqqIOkzNP4iV/H4IkNtgyXm4ugeIQzD8HQ6rb/DMBx+hyeT06PJ9Pjx8cnjaTiZHIWTk9PjkyMI71OJL0FpLOqj8LtlDY37SQAL/om04UpGUB17MRmmeWHr5/cuNi7OZ+BiA664EBBTIdQSUNZIcMg3XJafIda8Iu0zJS1ySdrjzLHIrC1MNB5jhRa1CVJus3JeGtKOkqQNmMrH5Xh6cnp2enYy/c08PTv7pXo69STmFMFWeHp2WVAEWBSCM3Q6elWnexiEwcT70d78+WA7/y3lhUBLZuxi2J+XXMRMyYSn31MU7sj/k/D4ySD/n0yPp4f8fwjYzH+eY0qBiwiT8cQGXI2ribfgMo7glcPNrCbMvZwsxmgx8gAEzkkY9wtcYkZwfR18QlGSCUxBjKPQZFSpGQXdssCl9mrlrylTrcriHeYUNGXkoqsiqxV4AE0puHfGjk0E1yvP931v0w912H/BD88c7qJOif37oRa2WsH9OqHj6gGglMrWlbRVfch1ywlXyG0EI6tLGt1NPTwR/IpkrPSwpt/JZ0FakvAxSbikXny9ec4tKqYZCWJW6cYE98bXSlCwKOdurSVTa6/0gnQEI6e7LuUHJThbRjCakeYo3FureZqSbn3hQ3PejJrtvshQpq3hPapOizWm0b9ZnnLb/ADQlNy2de55GKBBi0u5DTQlq1XLqtT8e1iVmresGgNecuvUthotpctG31ixBenZ1rvubcIFfUCbRfC8fw5ml+9bojpzznVqulXOVU3kjl69PX/5YtS/B6icCc4Y6KxpFP+olFhwW7sWoLcc4PraB+1cDf9HnUL0tF/Yy90k9/ucqenrxNjEb2pQE9SPQ4Ek45uYvv704vJWW5qw/aMUoq0rDRdV2qJsA8Oqzk07NfYjpi1qL8UvqtZkO4q60vCjj6UDPBB8qf+buP5vWMK/sQm8o/87DcPJdv93HE7D00P/9xCwNf91Tc6MdMUZnTOmSmm3+py9lKOdDkzPkQVY2kxp/k/dnwSLM7PViF0qQQ+gmS4FmcjzAQv+0tHVR5sPhlipuV1u9SqusWjFDcjqafezZUq6s5ZLazyAivS8pSsNbSx2urSIQvOKC0op/lYnPeMy5jJ9CF8pQZeUOAGdt27R0uuOvXon96WTKed/E7P1Ft4Y3PsS3PA1BbJbmdcNW095QypgUZj1hj5HypWckX3QIWyPTtrnBGIsWtd5Do+xHz683Lks0Sr3m4uXHIudoacsYrS03aE3/fx7+ZwEWZdPZmsqytGy7M1GnOwtUroeopW7EaYO/gdvUS/AZtxAoWJAAwhMc8sZCsA49pX8Fa4ykkAS54LiR2AzGpKAYRnFpSDd89VkSFdk1iUYEqV3FhYqNmAU2Ayt47wEhhLm5Ja1PGPAxG5wRkiQi1JTAPDRKb4OWnBTpQEuwaKMKYcrbrNaYasE6YZmTkJdBZ3XhwFfB0NnTYCiyHAwuXYm+IWK2/nVgdjazb3tZxOqnRizVT33I28o5d2eao+DPsN7R/rNPVh7HeZrSrmxeuOg9wcIU7HocRiG46+v8reQ7mOe60NkX1W8gdovH0ohuquVc3GFS9PjmcpzdKfYn6OxmXM55pLb0V89XvCE2JIJijYm60LTzKpi8xUAfV5H5E3cHXOTjR7ByGfu0yyNpZxZAcaqov4/w/gVx3WBN79/tVc2NO7au4umvdvWu2vcInDVuxvnd+6r4GvvrBpICK0rRW7JgLo9bNr/RIKkFCKC0dqu17uRMTpM+gc4wAEO8N+EfwMAAP//LXPcJgAiAAA=
+data:
+  index.yaml: |
+    apiVersion: v1
+    entries:
+      open-cas-kmod:
+      - apiVersion: v2
+        created: "2022-06-15T15:03:28.852301026+02:00"
+        description: Open-CAS kmod will deploy an Open CAS Linux driver-container
+        digest: e5472a0224ec1d04b27f1934e8b215e8a4b54747e5fae783371e9c14c6c6368c
+        icon: https://avatars.githubusercontent.com/u/43686834?s=88&v=4
+        name: open-cas-kmod
+        type: application
+        urls:
+        - cm://open-cas-kmod/open-cas-kmod-chart/open-cas-kmod-0.0.1.tgz
+        version: 0.0.1
+    generated: "2022-06-15T15:03:28.85186024+02:00"
+kind: ConfigMap
+metadata:
+  name: open-cas-kmod-chart
+  namespace: open-cas-kmod

@@ -4,8 +4,14 @@ Load [Open-CAS kernel modules](https://github.com/Open-CAS/open-cas-linux) using
 
 The initial implementation is targeted at Openshift clusters with Special Resource Operator (SRO)
  installed and Local Image Registry running.
-To deploy Open CAS kernel modules you must first create a config map with helm repository. Clone
-this repository or copy files from cm directory.
+To deploy Open CAS kernel modules you must first create a config map with a helm repository.
+You can use prepared config map:
+```
+git clone https://github.com/Open-CAS/kvc-open-cas-kmod
+oc create namespace open-cas-kmod
+oc apply -f kvc-open-cas-kmod/open-cas-kmod-config-map.yaml
+```
+Alternatively clone this repository or copy files from cm directory:
 ```
 git clone https://github.com/Open-CAS/kvc-open-cas-kmod
 cd kvc-open-cas-kmod/cm
