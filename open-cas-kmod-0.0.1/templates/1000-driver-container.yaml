@@ -71,6 +71,13 @@ spec:
               command: ["/bin/sh", "-c", "systemctl stop kmods-via-containers@{{.Values.specialresource.metadata.name}}"]
         securityContext:
           privileged: true
+        volumeMounts:
+          - name: dev
+            mountPath: /dev
+      volumes:
+        - name: dev
+          hostPath:
+            path: /dev
       nodeSelector:
         node-role.kubernetes.io/worker: ""
         feature.node.kubernetes.io/kernel-version.full: "{{.Values.KernelFullVersion}}"
