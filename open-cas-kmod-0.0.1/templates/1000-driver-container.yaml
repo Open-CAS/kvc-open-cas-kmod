@@ -57,6 +57,7 @@ spec:
         scheduler.alpha.kubernetes.io/critical-pod: ""
       labels:
         app: {{.Values.specialresource.metadata.name}}-{{.Values.groupName.driverContainer}}
+        resource: {{.Values.specialresource.metadata.name}}
     spec:
       serviceAccount: {{.Values.specialresource.metadata.name}}-{{.Values.groupName.driverContainer}}
       serviceAccountName: {{.Values.specialresource.metadata.name}}-{{.Values.groupName.driverContainer}}

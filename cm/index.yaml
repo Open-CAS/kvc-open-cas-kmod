@@ -2,13 +2,13 @@ apiVersion: v1
 entries:
   open-cas-kmod:
   - apiVersion: v2
-    created: "2022-08-29T11:34:29.23533284+02:00"
+    created: "2022-09-08T09:34:35.458967685+02:00"
     description: Open-CAS kmod will deploy an Open CAS Linux driver-container
-    digest: e578d9fe2d7f649e00eb871621d0852ec1e60e8b70164153b1239e4b3c0546c5
+    digest: 5cbf617c1ff4724c3149efa1061328ac3ae6e4d67fde80cebef40d83012b0da7
     icon: https://avatars.githubusercontent.com/u/43686834?s=88&v=4
     name: open-cas-kmod
     type: application
     urls:
     - cm://open-cas-kmod/open-cas-kmod-chart/open-cas-kmod-0.0.1.tgz
     version: 0.0.1
-generated: "2022-08-29T11:34:29.23491379+02:00"
+generated: "2022-09-08T09:34:35.458535358+02:00"
