@@ -14,7 +14,7 @@ ARG KMODVER
 # Grab Open CAS code from upstream and remove modprobe from its Makefile
 RUN git clone https://github.com/open-cas/open-cas-linux.git
 WORKDIR /build/open-cas-linux
-RUN git checkout -b ${KMODVER} ${KMODVER} \
+RUN git checkout -b ${KMODVER} origin/${KMODVER} \
     && git submodule update --init \
     && sed -i 's/utils//g' Makefile \
     && sed -i 's/^.*MODPROBE.*$//g' modules/Makefile
