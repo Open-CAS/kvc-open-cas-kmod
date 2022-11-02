@@ -17,7 +17,7 @@ spec:
     buildArgs:
     - name: "KMODVER"
       # REPLACE BELOW VALUE WITH DESIRED OPEN-CAS LINUX RELEASE
-      value: "v22.3"
+      value: "v22.6.2"
   driverContainer:
     source:
       git:
